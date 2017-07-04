@@ -1,0 +1,157 @@
+
+## <summary>policy for planbcoin</summary>
+
+
+########################################
+## <summary>
+##	Transition to planbcoin.
+## </summary>
+## <param name="domain">
+## <summary>
+##	Domain allowed to transition.
+## </summary>
+## </param>
+#
+interface(`planbcoin_domtrans',`
+	gen_require(`
+		type planbcoin_t, planbcoin_exec_t;
+	')
+
+	corecmd_search_bin($1)
+	domtrans_pattern($1, planbcoin_exec_t, planbcoin_t)
+')
+
+
+########################################
+## <summary>
+##	Execute planbcoin server in the planbcoin domain.
+## </summary>
+## <param name="domain">
+##	<summary>
+##	Domain allowed access.
+##	</summary>
+## </param>
+#
+interface(`planbcoin_initrc_domtrans',`
+	gen_require(`
+		type planbcoin_initrc_exec_t;
+	')
+
+	init_labeled_script_domtrans($1, planbcoin_initrc_exec_t)
+')
+
+
+########################################
+## <summary>
+##	Search planbcoin lib directories.
+## </summary>
+## <param name="domain">
+##	<summary>
+##	Domain allowed access.
+##	</summary>
+## </param>
+#
+interface(`planbcoin_search_lib',`
+	gen_require(`
+		type planbcoin_var_lib_t;
+	')
+
+	allow $1 planbcoin_var_lib_t:dir search_dir_perms;
+	files_search_var_lib($1)
+')
+
+########################################
+## <summary>
+##	Read planbcoin lib files.
+## </summary>
+## <param name="domain">
+##	<summary>
+##	Domain allowed access.
+##	</summary>
+## </param>
+#
+interface(`planbcoin_read_lib_files',`
+	gen_require(`
+		type planbcoin_var_lib_t;
+	')
+
+	files_search_var_lib($1)
+	read_files_pattern($1, planbcoin_var_lib_t, planbcoin_var_lib_t)
+')
+
+########################################
+## <summary>
+##	Manage planbcoin lib files.
+## </summary>
+## <param name="domain">
+##	<summary>
+##	Domain allowed access.
+##	</summary>
+## </param>
+#
+interface(`planbcoin_manage_lib_files',`
+	gen_require(`
+		type planbcoin_var_lib_t;
+	')
+
+	files_search_var_lib($1)
+	manage_files_pattern($1, planbcoin_var_lib_t, planbcoin_var_lib_t)
+')
+
+########################################
+## <summary>
+##	Manage planbcoin lib directories.
+## </summary>
+## <param name="domain">
+##	<summary>
+##	Domain allowed access.
+##	</summary>
+## </param>
+#
+interface(`planbcoin_manage_lib_dirs',`
+	gen_require(`
+		type planbcoin_var_lib_t;
+	')
+
+	files_search_var_lib($1)
+	manage_dirs_pattern($1, planbcoin_var_lib_t, planbcoin_var_lib_t)
+')
+
+
+########################################
+## <summary>
+##	All of the rules required to administrate
+##	a planbcoin environment
+## </summary>
+## <param name="domain">
+##	<summary>
+##	Domain allowed access.
+##	</summary>
+## </param>
+## <param name="role">
+##	<summary>
+##	Role allowed access.
+##	</summary>
+## </param>
+## <rolecap/>
+#
+interface(`planbcoin_admin',`
+	gen_require(`
+		type planbcoin_t;
+		type planbcoin_initrc_exec_t;
+		type planbcoin_var_lib_t;
+	')
+
+	allow $1 planbcoin_t:process { ptrace signal_perms };
+	ps_process_pattern($1, planbcoin_t)
+
+	planbcoin_initrc_domtrans($1)
+	domain_system_change_exemption($1)
+	role_transition $2 planbcoin_initrc_exec_t system_r;
+	allow $2 system_r;
+
+	files_search_var_lib($1)
+	admin_pattern($1, planbcoin_var_lib_t)
+
+')
+
