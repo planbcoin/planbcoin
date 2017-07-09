@@ -1,0 +1,11 @@
+prefix=/usr/local
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: Planbcoin Core consensus library
+Description: Library for the Planbcoin consensus protocol.
+Version: 0.14.99
+Libs: -L${libdir} -lplanbcoinconsensus
+Cflags: -I${includedir}
+Requires.private: libcrypto
