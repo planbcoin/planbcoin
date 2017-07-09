@@ -1,5 +1,5 @@
 #! /bin/sh
-# Generated automatically by config.status (planbcoin) 0.14.99
+# Generated automatically by config.status (planbcoin) 0.5.0
 # Libtool was configured on host hulk:
 # NOTE: Changes made to this file will be lost: look at ltmain.sh.
 
@@ -45,7 +45,7 @@ macro_revision=2.4.6
 pic_mode=yes
 
 # Whether or not to build shared libraries.
-build_libtool_libs=yes
+build_libtool_libs=no
 
 # Whether or not to build static libraries.
 build_old_libs=yes

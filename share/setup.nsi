@@ -5,7 +5,7 @@ SetCompressor /SOLID lzma
 
 # General Symbol Definitions
 !define REGKEY "SOFTWARE\$(^Name)"
-!define VERSION 0.14.99
+!define VERSION 0.5.0
 !define COMPANY "Planbcoin Core project"
 !define URL https://planbcoincore.org/
 
