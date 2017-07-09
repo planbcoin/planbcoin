@@ -1,0 +1,13 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Planbcoin Core
+Comment=Connect to the Planbcoin P2P Network
+Comment[de]=Verbinde mit dem Planbcoin peer-to-peer Netzwerk
+Comment[fr]=Planbcoin, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Planbcoin, eşten eşe kriptografik sanal para birimi
+Exec=planbcoin-qt %u
+Terminal=false
+Type=Application
+Icon=planbcoin128
+MimeType=x-scheme-handler/planbcoin;
+Categories=Office;Finance;
