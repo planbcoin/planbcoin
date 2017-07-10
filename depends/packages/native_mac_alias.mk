@@ -1,9 +1,9 @@
 package=native_mac_alias
-$(package)_version=1.1.0
-$(package)_download_path=https://bitbucket.org/al45tair/mac_alias/get
-$(package)_download_file=v$($(package)_version).tar.bz2
-$(package)_file_name=$(package)-$($(package)_version).tar.bz2
-$(package)_sha256_hash=87ad827e66790028361e43fc754f68ed041a9bdb214cca03c853f079b04fb120
+$(package)_version=2.1.1
+$(package)_download_path=https://github.com/planbcoin/mac_alias/archive
+$(package)_download_file=v$($(package)_version).tar.gz
+$(package)_file_name=$(package)-$($(package)_version).tar.gz
+$(package)_sha256_hash=79d01241f1fc2a3f733084ace93fb57b976229eed143214492015a7a961a0ce4
 $(package)_install_libdir=$(build_prefix)/lib/python/dist-packages
 $(package)_patches=python3.patch
 
