@@ -1,6 +1,6 @@
 ---
 name: "planbcoin-osx"
-enable_cache: true
+enable_cache: false
 suites:
 - "trusty"
 architectures:
