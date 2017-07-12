@@ -1,0 +1,6 @@
+usr/local/bin/planbcoin-qt usr/bin
+share/pixmaps/planbcoin32.xpm usr/share/pixmaps
+share/pixmaps/planbcoin16.xpm usr/share/pixmaps
+share/pixmaps/planbcoin128.png usr/share/pixmaps
+debian/planbcoin-qt.desktop usr/share/applications
+debian/planbcoin-qt.protocol usr/share/kde4/services/

@@ -1,0 +1,7 @@
+[main]
+host = https://www.transifex.com
+
+[planbcoin.qt-translation-014x]
+file_filter = src/qt/locale/planbcoin_<lang>.ts
+source_file = src/qt/locale/planbcoin_en.ts
+source_lang = en
