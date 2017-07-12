@@ -1,5 +1,5 @@
 ---
-name: "planbcoin-osx-0.15"
+name: "planbcoin-osx"
 enable_cache: true
 suites:
 - "trusty"
