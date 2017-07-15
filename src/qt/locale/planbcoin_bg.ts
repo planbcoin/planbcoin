@@ -2346,7 +2346,7 @@
         <translation>Въведете Ваш публичен адрес</translation>
     </message>
     <message>
-        <source>Planbcoin Core</source>
+        <source>PlanBcoin</source>
         <translation>Биткойн ядро</translation>
     </message>
     <message>

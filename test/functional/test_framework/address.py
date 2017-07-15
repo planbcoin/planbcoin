@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Copyright (c) 2016 The Planbcoin Core developers
+# Copyright (c) 2016 The PlanBcoin developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Encode and decode BASE58, P2PKH and P2SH addresses."""

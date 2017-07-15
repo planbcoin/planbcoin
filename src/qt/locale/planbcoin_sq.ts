@@ -784,7 +784,7 @@
         <translation>Opsionet:</translation>
     </message>
     <message>
-        <source>Planbcoin Core</source>
+        <source>PlanBcoin</source>
         <translation>Berthama Planbcoin</translation>
     </message>
     <message>

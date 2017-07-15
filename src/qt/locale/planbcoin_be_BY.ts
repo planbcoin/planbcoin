@@ -1258,8 +1258,8 @@
         <translation>Запусціць у фоне як дэман і прымаць каманды</translation>
     </message>
     <message>
-        <source>Planbcoin Core</source>
-        <translation>Planbcoin Core</translation>
+        <source>PlanBcoin</source>
+        <translation>PlanBcoin</translation>
     </message>
     <message>
         <source>Do you want to rebuild the block database now?</source>

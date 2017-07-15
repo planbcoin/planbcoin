@@ -3054,7 +3054,7 @@
         <translation>HTTP sunucusu başlatılamadı. Ayrıntılar için debug.log dosyasına bakınız.</translation>
     </message>
     <message>
-        <source>Planbcoin Core</source>
+        <source>PlanBcoin</source>
         <translation>Planbcoin Çekirdeği</translation>
     </message>
     <message>

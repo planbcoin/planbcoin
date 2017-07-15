@@ -1208,8 +1208,8 @@
         <translation>Демон сифатида орқа фонда ишга туширинг ва буйруқларга рози бўлинг</translation>
     </message>
     <message>
-        <source>Planbcoin Core</source>
-        <translation>Planbcoin Core</translation>
+        <source>PlanBcoin</source>
+        <translation>PlanBcoin</translation>
     </message>
     <message>
         <source>Connection options:</source>

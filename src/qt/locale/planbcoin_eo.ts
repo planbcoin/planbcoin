@@ -1222,7 +1222,7 @@
         <translation>Ruli fone kiel demono kaj akcepti komandojn</translation>
     </message>
     <message>
-        <source>Planbcoin Core</source>
+        <source>PlanBcoin</source>
         <translation>Kerno de Bitmono</translation>
     </message>
     <message>

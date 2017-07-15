@@ -296,8 +296,8 @@
 <context>
     <name>planbcoin-core</name>
     <message>
-        <source>Planbcoin Core</source>
-        <translation>Planbcoin Core</translation>
+        <source>PlanBcoin</source>
+        <translation>PlanBcoin</translation>
     </message>
     <message>
         <source>Insufficient funds</source>

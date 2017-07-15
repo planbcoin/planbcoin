@@ -3054,8 +3054,8 @@
         <translation>Невозможно запустить HTTP сервер. Смотри debug лог для подробностей.</translation>
     </message>
     <message>
-        <source>Planbcoin Core</source>
-        <translation>Planbcoin Core</translation>
+        <source>PlanBcoin</source>
+        <translation>PlanBcoin</translation>
     </message>
     <message>
         <source>The %s developers</source>

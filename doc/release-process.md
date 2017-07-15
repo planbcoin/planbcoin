@@ -108,7 +108,7 @@ NOTE: Offline builds must use the --url flag to ensure Gitian fetches only from 
 
 The gbuild invocations below <b>DO NOT DO THIS</b> by default.
 
-### Build and sign Planbcoin Core for Linux, Windows, and OS X:
+### Build and sign PlanBcoin for Linux, Windows, and OS X:
 
     pushd ./gitian-builder
     ./bin/gbuild --memory 3000 --commit planbcoin=v${VERSION} ../planbcoin/contrib/gitian-descriptors/gitian-linux.yml
@@ -292,7 +292,7 @@ planbcoin.org (see below for planbcoin.org update instructions).
 
   - planbcoin-dev and planbcoin-core-dev mailing list
 
-  - Planbcoin Core announcements list https://planbcoincore.org/en/list/announcements/join/
+  - PlanBcoin announcements list https://planbcoincore.org/en/list/announcements/join/
 
   - planbcoincore.org blog post
 

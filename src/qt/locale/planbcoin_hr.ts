@@ -1034,8 +1034,8 @@
         <translation>Izvršavaj u pozadini kao uslužnik i prihvaćaj komande</translation>
     </message>
     <message>
-        <source>Planbcoin Core</source>
-        <translation>Planbcoin Core</translation>
+        <source>PlanBcoin</source>
+        <translation>PlanBcoin</translation>
     </message>
     <message>
         <source>Block creation options:</source>

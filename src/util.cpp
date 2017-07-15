@@ -1,5 +1,5 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2009-2016 The Planbcoin Core developers
+// Copyright (c) 2009-2016 The PlanBcoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -887,9 +887,9 @@ std::string CopyrightHolders(const std::string& strPrefix)
 {
     std::string strCopyrightHolders = strPrefix + strprintf(_(COPYRIGHT_HOLDERS), _(COPYRIGHT_HOLDERS_SUBSTITUTION));
 
-    // Check for untranslated substitution to make sure Planbcoin Core copyright is not removed by accident
-    if (strprintf(COPYRIGHT_HOLDERS, COPYRIGHT_HOLDERS_SUBSTITUTION).find("Planbcoin Core") == std::string::npos) {
-        strCopyrightHolders += "\n" + strPrefix + "The Planbcoin Core developers";
+    // Check for untranslated substitution to make sure PlanBcoin copyright is not removed by accident
+    if (strprintf(COPYRIGHT_HOLDERS, COPYRIGHT_HOLDERS_SUBSTITUTION).find("PlanBcoin") == std::string::npos) {
+        strCopyrightHolders += "\n" + strPrefix + "The PlanBcoin developers";
     }
     return strCopyrightHolders;
 }

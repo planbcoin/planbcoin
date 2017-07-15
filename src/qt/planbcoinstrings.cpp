@@ -9,7 +9,7 @@
 #define UNUSED
 #endif
 static const char UNUSED *planbcoin_strings[] = {
-QT_TRANSLATE_NOOP("planbcoin-core", "Planbcoin Core"),
+QT_TRANSLATE_NOOP("planbcoin-core", "PlanBcoin"),
 QT_TRANSLATE_NOOP("planbcoin-core", "The %s developers"),
 QT_TRANSLATE_NOOP("planbcoin-core", ""
 "(1 = keep tx meta data e.g. account owner and payment request information, 2 "

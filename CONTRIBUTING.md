@@ -1,7 +1,7 @@
-Contributing to Planbcoin Core
+Contributing to PlanBcoin
 ============================
 
-The Planbcoin Core project operates an open contributor model where anyone is
+The PlanBcoin project operates an open contributor model where anyone is
 welcome to contribute towards development in the form of peer review, testing
 and patches. This document explains the practical process and guidelines for
 contributing.
@@ -157,11 +157,11 @@ where possible keep them short, uncomplex and easy to verify.
 "Decision Making" Process
 -------------------------
 
-The following applies to code changes to the Planbcoin Core project (and related
+The following applies to code changes to the PlanBcoin project (and related
 projects such as libsecp256k1), and is not to be confused with overall Planbcoin
 Network Protocol consensus changes.
 
-Whether a pull request is merged into Planbcoin Core rests with the project merge
+Whether a pull request is merged into PlanBcoin rests with the project merge
 maintainers and ultimately the project lead.
 
 Maintainers will take into consideration if a patch is in line with the general
@@ -260,7 +260,7 @@ about:
 Release Policy
 --------------
 
-The project leader is the release manager for each Planbcoin Core release.
+The project leader is the release manager for each PlanBcoin release.
 
 Copyright
 ---------

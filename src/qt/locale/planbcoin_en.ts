@@ -4079,8 +4079,8 @@
     </message>
     <message>
         <location line="-372"/>
-        <source>Planbcoin Core</source>
-        <translation type="unfinished">Planbcoin Core</translation>
+        <source>PlanBcoin</source>
+        <translation type="unfinished">PlanBcoin</translation>
     </message>
     <message>
         <location line="+1"/>

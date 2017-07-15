@@ -1758,7 +1758,7 @@
         <translation>Tööta taustal ning aktsepteeri käsklusi</translation>
     </message>
     <message>
-        <source>Planbcoin Core</source>
+        <source>PlanBcoin</source>
         <translation>Planbcoini tuumik</translation>
     </message>
     <message>

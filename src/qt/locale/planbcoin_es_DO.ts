@@ -1123,7 +1123,7 @@
 </translation>
     </message>
     <message>
-        <source>Planbcoin Core</source>
+        <source>PlanBcoin</source>
         <translation>Núcleo de Planbcoin</translation>
     </message>
     <message>

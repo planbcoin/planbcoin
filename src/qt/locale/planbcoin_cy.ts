@@ -484,7 +484,7 @@
         <translation>Opsiynau:</translation>
     </message>
     <message>
-        <source>Planbcoin Core</source>
+        <source>PlanBcoin</source>
         <translation>Craidd Planbcoin</translation>
     </message>
     <message>

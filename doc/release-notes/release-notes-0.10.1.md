@@ -1,4 +1,4 @@
-Planbcoin Core version 0.10.1 is now available from:
+PlanBcoin version 0.10.1 is now available from:
 
   <https://planbcoin.org/bin/planbcoin-core-0.10.1/>
 
@@ -25,7 +25,7 @@ Downgrade warning
 
 Because release 0.10.0 and later makes use of headers-first synchronization and
 parallel block download (see further), the block files and databases are not
-backwards-compatible with pre-0.10 versions of Planbcoin Core or other software:
+backwards-compatible with pre-0.10 versions of PlanBcoin or other software:
 
 * Blocks will be stored on disk out of order (in the order they are
 received, really), which makes it incompatible with some tools or

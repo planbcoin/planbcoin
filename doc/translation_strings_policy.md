@@ -1,7 +1,7 @@
 Translation Strings Policy
 ===========================
 
-This document provides guidelines for internationalization of the Planbcoin Core software.
+This document provides guidelines for internationalization of the PlanBcoin software.
 
 How to translate?
 ------------------

@@ -18,7 +18,7 @@ BITCOIND_BIN=${BITCOIND_BIN:-/usr/bin/planbcoind}
 BITCOIND_NICE=${BITCOIND_NICE:-${NICELEVEL:-0}}
 BITCOIND_OPTS="${BITCOIND_OPTS:-${BITCOIN_OPTS}}"
 
-name="Planbcoin Core Daemon"
+name="PlanBcoin Daemon"
 description="Planbcoin cryptocurrency P2P network daemon"
 
 command="/usr/bin/planbcoind"

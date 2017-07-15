@@ -1,7 +1,7 @@
 (note: this is a temporary file, to be added-to by anybody, and moved to
 release-notes at release time)
 
-Planbcoin Core version *version* is now available from:
+PlanBcoin version *version* is now available from:
 
   <https://planbcoin.org/bin/planbcoin-core-*version*/>
 
@@ -19,7 +19,7 @@ To receive security and update notifications, please subscribe to:
 Compatibility
 ==============
 
-Planbcoin Core is extensively tested on multiple operating systems using
+PlanBcoin is extensively tested on multiple operating systems using
 the Linux kernel, macOS 10.8+, and Windows Vista and later.
 
 Microsoft ended support for Windows XP on [April 8th, 2014](https://www.microsoft.com/en-us/WindowsForBusiness/end-of-xp-support).
@@ -27,7 +27,7 @@ No attempt is made to prevent installing or running the software on Windows XP, 
 can still do so at your own risk but be aware that there are known instabilities.
 Please do not report issues about Windows XP to the issue tracker.
 
-Planbcoin Core should also work on most other Unix-like systems but is not
+PlanBcoin should also work on most other Unix-like systems but is not
 frequently tested on them.
 
 Notable changes

@@ -59,7 +59,7 @@
     <name>PlanbcoinGUI</name>
     <message>
         <source>Planbcoin</source>
-        <translation>Planbcoin Core</translation>
+        <translation>PlanBcoin</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -228,8 +228,8 @@
 <context>
     <name>planbcoin-core</name>
     <message>
-        <source>Planbcoin Core</source>
-        <translation>Planbcoin Core</translation>
+        <source>PlanBcoin</source>
+        <translation>PlanBcoin</translation>
     </message>
     <message>
         <source>Whitelisted peers cannot be DoS banned and their transactions are always relayed, even if they are already in the mempool, useful e.g. for a gateway</source>

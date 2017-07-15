@@ -752,7 +752,7 @@
         <translation>Gumana king gulut bilang daemon at tumanggap commands</translation>
     </message>
     <message>
-        <source>Planbcoin Core</source>
+        <source>PlanBcoin</source>
         <translation>Kapilubluban ning Planbcoin</translation>
     </message>
     <message>

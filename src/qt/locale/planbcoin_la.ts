@@ -768,7 +768,7 @@
         <translation>Operare infere sicut daemon et mandata accipe</translation>
     </message>
     <message>
-        <source>Planbcoin Core</source>
+        <source>PlanBcoin</source>
         <translation>Planbcoin Nucleus</translation>
     </message>
     <message>

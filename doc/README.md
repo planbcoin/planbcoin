@@ -1,11 +1,11 @@
-Planbcoin Core
+PlanBcoin
 =============
 
 Setup
 ---------------------
-Planbcoin Core is the original Planbcoin client and it builds the backbone of the network. It downloads and, by default, stores the entire history of Planbcoin transactions (which is currently more than 100 GBs); depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more.
+PlanBcoin is the original Planbcoin client and it builds the backbone of the network. It downloads and, by default, stores the entire history of Planbcoin transactions (which is currently more than 100 GBs); depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more.
 
-To download Planbcoin Core, visit [planbcoincore.org](https://planbcoincore.org/en/releases/).
+To download PlanBcoin, visit [planbcoincore.org](https://planbcoincore.org/en/releases/).
 
 Running
 ---------------------

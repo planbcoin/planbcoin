@@ -772,7 +772,7 @@
 </translation>
     </message>
     <message>
-        <source>Planbcoin Core</source>
+        <source>PlanBcoin</source>
         <translation>planbcoin core</translation>
     </message>
     <message>

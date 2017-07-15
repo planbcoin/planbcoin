@@ -1,7 +1,7 @@
 Gitian building
 ================
 
-*Setup instructions for a Gitian build of Planbcoin Core using a Debian VM or physical system.*
+*Setup instructions for a Gitian build of PlanBcoin using a Debian VM or physical system.*
 
 Gitian is the deterministic build process that is used to build the Planbcoin
 Core executables. It provides a way to be reasonably sure that the
@@ -26,7 +26,7 @@ Table of Contents
 - [Installing Gitian](#installing-gitian)
 - [Setting up the Gitian image](#setting-up-the-gitian-image)
 - [Getting and building the inputs](#getting-and-building-the-inputs)
-- [Building Planbcoin Core](#building-planbcoin-core)
+- [Building PlanBcoin](#building-planbcoin-core)
 - [Building an alternative repository](#building-an-alternative-repository)
 - [Signing externally](#signing-externally)
 - [Uploading signatures](#uploading-signatures)
@@ -345,10 +345,10 @@ manual intervention. Also optionally follow the next step: 'Seed the Gitian sour
 and offline git repositories' which will fetch the remaining files required for building
 offline.
 
-Building Planbcoin Core
+Building PlanBcoin
 ----------------
 
-To build Planbcoin Core (for Linux, OS X and Windows) just follow the steps under 'perform
+To build PlanBcoin (for Linux, OS X and Windows) just follow the steps under 'perform
 Gitian builds' in [doc/release-process.md](release-process.md#perform-gitian-builds) in the planbcoin repository.
 
 This may take some time as it will build all the dependencies needed for each descriptor.

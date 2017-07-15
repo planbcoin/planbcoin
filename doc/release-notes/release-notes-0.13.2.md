@@ -1,4 +1,4 @@
-Planbcoin Core version 0.13.2 is now available from:
+PlanBcoin version 0.13.2 is now available from:
 
   <https://planbcoin.org/bin/planbcoin-core-0.13.2/>
 
@@ -21,7 +21,7 @@ an OS initially released in 2001. This means that not even critical security
 updates will be released anymore. Without security updates, using a planbcoin
 wallet on a XP machine is irresponsible at least.
 
-In addition to that, with 0.12.x there have been varied reports of Planbcoin Core
+In addition to that, with 0.12.x there have been varied reports of PlanBcoin
 randomly crashing on Windows XP. It is [not clear](https://github.com/planbcoin/planbcoin/issues/7681#issuecomment-217439891)
 what the source of these crashes is, but it is likely that upstream
 libraries such as Qt are no longer being tested on XP.

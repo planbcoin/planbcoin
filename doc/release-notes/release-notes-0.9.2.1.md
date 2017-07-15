@@ -1,4 +1,4 @@
-Planbcoin Core version 0.9.2.1 is now available from:
+PlanBcoin version 0.9.2.1 is now available from:
 
   https://planbcoin.org/bin/0.9.2.1/
 

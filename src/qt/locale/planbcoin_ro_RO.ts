@@ -1594,7 +1594,7 @@
         <translation>Rulează în fundal ca un demon şi acceptă comenzi</translation>
     </message>
     <message>
-        <source>Planbcoin Core</source>
+        <source>PlanBcoin</source>
         <translation>Nucleul Planbcoin</translation>
     </message>
     <message>

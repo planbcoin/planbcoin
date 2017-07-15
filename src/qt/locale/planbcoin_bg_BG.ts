@@ -420,7 +420,7 @@
 <context>
     <name>planbcoin-core</name>
     <message>
-        <source>Planbcoin Core</source>
+        <source>PlanBcoin</source>
         <translation>Биткойн ядро</translation>
     </message>
     </context>

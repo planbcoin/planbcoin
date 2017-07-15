@@ -1,4 +1,4 @@
-Planbcoin Core version 0.9.4 is now available from:
+PlanBcoin version 0.9.4 is now available from:
 
   https://planbcoin.org/bin/0.9.4/
 
@@ -25,15 +25,15 @@ various operating system maintainers. Review by Gregory Maxwell determined that
 this update is incompatible with the Planbcoin system and could lead to consensus
 forks.
 
-Planbcoin Core released binaries from https://planbcoin.org are unaffected,
+PlanBcoin released binaries from https://planbcoin.org are unaffected,
 as are any built with the gitian deterministic build system.
 
 However, if you are running either
 
 - The Ubuntu PPA from https://launchpad.net/~planbcoin/+archive/ubuntu/planbcoin
-- A third-party or self-compiled Planbcoin Core
+- A third-party or self-compiled PlanBcoin
 
-upgrade to Planbcoin Core 0.9.4, which includes a workaround, **before** updating
+upgrade to PlanBcoin 0.9.4, which includes a workaround, **before** updating
 OpenSSL.
 
 The incompatibility is due to the OpenSSL update changing the

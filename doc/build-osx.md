@@ -24,7 +24,7 @@ If you want to build the disk image with `make deploy` (.dmg / optional), you ne
 
 NOTE: Building with Qt4 is still supported, however, could result in a broken UI. Building with Qt5 is recommended.
 
-Build Planbcoin Core
+Build PlanBcoin
 ------------------------
 
 1. Clone the planbcoin source code and cd into `planbcoin`
@@ -53,7 +53,7 @@ Build Planbcoin Core
 Running
 -------
 
-Planbcoin Core is now available at `./src/planbcoind`
+PlanBcoin is now available at `./src/planbcoind`
 
 Before running, it's recommended you create an RPC configuration file.
 
