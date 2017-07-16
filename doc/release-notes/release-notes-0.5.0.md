@@ -31,7 +31,7 @@ new private keys are properly backed up you should:
 1. Run Planbcoin and let it rewrite the wallet.dat file
 
 2. Run it again, then ask it for a new planbcoin address.
-Planbcoin-Qt: Address Book, then New Address...
+PlanBcoin: Address Book, then New Address...
 planbcoind: run the 'walletpassphrase' RPC command to unlock the wallet,  then run the 'getnewaddress' RPC command.
 
 3. If your encrypted wallet.dat may have been copied or stolen, send  all of your planbcoins to the new planbcoin address.

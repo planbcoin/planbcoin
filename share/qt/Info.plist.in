@@ -29,16 +29,16 @@
   <string>????</string>
 
   <key>CFBundleExecutable</key>
-  <string>Planbcoin-Qt</string>
+  <string>PlanBcoin</string>
   
   <key>CFBundleName</key>
-  <string>Planbcoin-Qt</string>
+  <string>PlanBcoin</string>
 
   <key>LSHasLocalizedDisplayName</key>
   <true/>
 
   <key>CFBundleIdentifier</key>
-  <string>org.planbcoinfoundation.Planbcoin-Qt</string>
+  <string>org.planbcoinfoundation.PlanBcoin</string>
 
   <key>CFBundleURLTypes</key>
   <array>

@@ -24,7 +24,7 @@ Resolved multiple bugs preventing long-term unlocking of encrypted wallets
 Only send local IP in "version" messages if it is globally routable (ie, not private), and try to get such an IP from UPnP if applicable.
 Reannounce UPnP port forwards every 20 minutes, to workaround routers expiring old entries, and allow the -upnp option to override any stored setting.
 Skip splash screen when -min is used, and fix Minimize to Tray function.
-Do not blank "label" in Planbcoin-Qt "Send" tab, if the user has already entered something.
+Do not blank "label" in PlanBcoin "Send" tab, if the user has already entered something.
 Correct various labels and messages.
 Various memory leaks and potential null pointer deferences have been fixed.
 Handle invalid Planbcoin URIs using "planbcoin://" instead of "planbcoin:".
@@ -34,9 +34,9 @@ Check that keys stored in the wallet are valid at startup, and if not, report co
 Enable accessible widgets on Windows, so that people with screen readers such as NVDA can make sense of it.
 Various build fixes.
 If no password is specified to planbcoind, recommend a secure password.
-Automatically focus and scroll to new "Send coins" entries in Planbcoin-Qt.
-Show a message box for --help on Windows, for Planbcoin-Qt.
+Automatically focus and scroll to new "Send coins" entries in PlanBcoin.
+Show a message box for --help on Windows, for PlanBcoin.
 Add missing "About Qt" menu option to show built-in Qt About dialog.
-Don't show "-daemon" as an option for Planbcoin-Qt, since it isn't available.
+Don't show "-daemon" as an option for PlanBcoin, since it isn't available.
 Update hard-coded fallback seed nodes, choosing recent ones with long uptime and versions at least 0.4.0.
 Add checkpoint at block 168,000.

@@ -50,7 +50,7 @@ static const int MAX_URI_LENGTH = 255;
 
 #define QAPP_ORG_NAME "Planbcoin"
 #define QAPP_ORG_DOMAIN "planbcoin.org"
-#define QAPP_APP_NAME_DEFAULT "Planbcoin-Qt"
-#define QAPP_APP_NAME_TESTNET "Planbcoin-Qt-testnet"
+#define QAPP_APP_NAME_DEFAULT "PlanBcoin"
+#define QAPP_APP_NAME_TESTNET "PlanBcoin-testnet"
 
 #endif // BITCOIN_QT_GUICONSTANTS_H

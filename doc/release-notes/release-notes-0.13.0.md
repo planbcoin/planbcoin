@@ -11,7 +11,7 @@ Please report bugs using the issue tracker at github:
 
 To receive security and update notifications, please subscribe to:
 
-  <https://planbcoincore.org/en/list/announcements/join/>
+  <https://planbcoin.com/en/list/announcements/join/>
 
 Compatibility
 ==============
@@ -232,7 +232,7 @@ files on disk. These two have now been split up, so that all blocks are known
 before validation starts. This was necessary to make certain optimizations that
 are available during normal synchronizations also available during reindexing.
 
-The two phases are distinct in the Planbcoin-Qt GUI. During the first one,
+The two phases are distinct in the PlanBcoin GUI. During the first one,
 "Reindexing blocks on disk" is shown. During the second (slower) one,
 "Processing blocks on disk" is shown.
 

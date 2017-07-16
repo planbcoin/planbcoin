@@ -3,7 +3,7 @@ PlanBcoin integration/staging tree
 
 [![Build Status](https://travis-ci.org/planbcoin/planbcoin.svg?branch=master)](https://travis-ci.org/planbcoin/planbcoin)
 
-https://planbcoincore.org
+https://planbcoin.com
 
 What is Planbcoin?
 ----------------
@@ -16,7 +16,7 @@ software which enables the use of this currency.
 
 For more information, as well as an immediately useable, binary version of
 the PlanBcoin software, see https://planbcoin.org/en/download, or read the
-[original whitepaper](https://planbcoincore.org/planbcoin.pdf).
+[original whitepaper](https://planbcoin.com/planbcoin.pdf).
 
 License
 -------

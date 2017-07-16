@@ -1,7 +1,7 @@
 Planbcoin version 0.7.0 is now available for download at:
   http://sourceforge.net/projects/planbcoin/files/Planbcoin/planbcoin-0.7.0/
 
-We recommend that everybody running prior versions of planbcoind/Planbcoin-Qt
+We recommend that everybody running prior versions of planbcoind/PlanBcoin
 upgrade to this release, except for users running Mac OSX 10.5.
 
 Please report bugs using the issue tracker at github:
@@ -27,7 +27,7 @@ If you are running an older version, shut it down. Wait
 until it has completely shut down (which might take a few minutes for older
 versions), then run the installer (on Windows) or just copy over
 Code:
-/Applications/Planbcoin-Qt
+/Applications/PlanBcoin
 (on Mac) or
 Code:
 planbcoind/planbcoin-qt

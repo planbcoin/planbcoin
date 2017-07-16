@@ -1,4 +1,4 @@
-Planbcoin-Qt version 0.8.4 is now available from:
+PlanBcoin version 0.8.4 is now available from:
   http://sourceforge.net/projects/planbcoin/files/Planbcoin/planbcoin-0.8.4/
 
 This is a maintenance release to fix a critical bug and three
@@ -14,7 +14,7 @@ How to Upgrade
 If you are running an older version, shut it down. Wait
 until it has completely shut down (which might take a few minutes for older
 versions), then run the installer (on Windows) or just copy over
-/Applications/Planbcoin-Qt (on Mac) or planbcoind/planbcoin-qt (on Linux).
+/Applications/PlanBcoin (on Mac) or planbcoind/planbcoin-qt (on Linux).
 
 If you are upgrading from version 0.7.2 or earlier, the first time you
 run 0.8.4 your blockchain files will be re-indexed, which will take
@@ -29,7 +29,7 @@ Security issues
 
 An attacker could send a series of messages that resulted in
 an integer division-by-zero error in the Bloom Filter handling
-code, causing the Planbcoin-Qt or planbcoind process to crash.
+code, causing the PlanBcoin or planbcoind process to crash.
 Bloom filters were introduced with version 0.8, so versions 0.8.0
 through 0.8.3 are vulnerable to this critical denial-of-service attack.
 

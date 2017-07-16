@@ -13,7 +13,7 @@
 - (NSString *)__bundleIdentifier
 {
     if (self == [NSBundle mainBundle]) {
-        return @"org.planbcoinfoundation.Planbcoin-Qt";
+        return @"org.planbcoinfoundation.PlanBcoin";
     } else {
         return [self __bundleIdentifier];
     }

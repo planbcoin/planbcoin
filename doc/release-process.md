@@ -84,7 +84,7 @@ Ensure gitian-builder is up-to-date:
 
     pushd ./gitian-builder
     mkdir -p inputs
-    wget -P inputs https://planbcoincore.org/cfields/osslsigncode-Backports-to-1.7.1.patch
+    wget -P inputs https://planbcoin.com/cfields/osslsigncode-Backports-to-1.7.1.patch
     wget -P inputs http://downloads.sourceforge.net/project/osslsigncode/osslsigncode/osslsigncode-1.7.1.tar.gz
     popd
 
@@ -292,9 +292,9 @@ planbcoin.org (see below for planbcoin.org update instructions).
 
   - planbcoin-dev and planbcoin-core-dev mailing list
 
-  - PlanBcoin announcements list https://planbcoincore.org/en/list/announcements/join/
+  - PlanBcoin announcements list https://planbcoin.com/en/list/announcements/join/
 
-  - planbcoincore.org blog post
+  - planbcoin.com blog post
 
   - Update title of #planbcoin on Freenode IRC
 

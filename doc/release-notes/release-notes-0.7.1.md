@@ -30,7 +30,7 @@ How to Upgrade
 If you are running an older version, shut it down. Wait
 until it has completely shut down (which might take a few minutes for older
 versions), then run the installer (on Windows) or just copy over
-/Applications/Planbcoin-Qt (on Mac) or planbcoind/planbcoin-qt (on Linux).
+/Applications/PlanBcoin (on Mac) or planbcoind/planbcoin-qt (on Linux).
 
 If you were running on Linux with a version that might have been compiled
 with a different version of Berkeley DB (for example, if you were using an
@@ -75,7 +75,7 @@ Dependency changes
 Bug fixes
 ---------
 
-* Clicking on a planbcoin: URI on Windows should now launch Planbcoin-Qt properly.
+* Clicking on a planbcoin: URI on Windows should now launch PlanBcoin properly.
 
 * When running -testnet, use RPC port 18332 by default.
 

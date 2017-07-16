@@ -4,7 +4,7 @@ This issue tracker is only for technical issues related to planbcoin-core.
 
 General planbcoin questions and/or support requests and are best directed to the [Planbcoin StackExchange](https://planbcoin.stackexchange.com).
 
-For reporting security issues, please read instructions at [https://planbcoincore.org/en/contact/](https://planbcoincore.org/en/contact/).
+For reporting security issues, please read instructions at [https://planbcoin.com/en/contact/](https://planbcoin.com/en/contact/).
 
 ### Describe the issue
 
