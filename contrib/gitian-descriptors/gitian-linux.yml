@@ -1,5 +1,5 @@
 ---
-name: "planbcoin-linux-0.15"
+name: "planbcoin-linux"
 enable_cache: true
 suites:
 - "trusty"

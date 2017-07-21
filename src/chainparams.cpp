@@ -218,10 +218,12 @@ public:
         vFixedSeeds.clear();
         vSeeds.clear();
         // nodes with support for servicebits filtering should be at the top
-        vSeeds.emplace_back("testnet-seed.planbcoin.jonasschnelli.ch", true);
-        vSeeds.emplace_back("seed.tbtc.petertodd.org", true);
-        vSeeds.emplace_back("testnet-seed.bluematt.me", false);
-        vSeeds.emplace_back("testnet-seed.planbcoin.schildbach.de", false);
+        vSeeds.emplace_back("seed.planbcoin.com", true);
+
+        // vSeeds.emplace_back("testnet-seed.planbcoin.jonasschnelli.ch", true);
+        // vSeeds.emplace_back("seed.tbtc.petertodd.org", true);
+        // vSeeds.emplace_back("testnet-seed.bluematt.me", false);
+        // vSeeds.emplace_back("testnet-seed.planbcoin.schildbach.de", false);
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,111);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,196);
