@@ -332,10 +332,10 @@ if [ `%{_sbindir}/sestatus |grep -c "disabled"` -eq 0 ]; then
 for selinuxvariant in %{selinux_variants}; do
 	%{_sbindir}/semodule -s ${selinuxvariant} -i %{_datadir}/selinux/${selinuxvariant}/planbcoin.pp &> /dev/null || :
 done
-%{_sbindir}/semanage port -a -t planbcoin_port_t -p tcp 8332
-%{_sbindir}/semanage port -a -t planbcoin_port_t -p tcp 8333
-%{_sbindir}/semanage port -a -t planbcoin_port_t -p tcp 18332
-%{_sbindir}/semanage port -a -t planbcoin_port_t -p tcp 18333
+%{_sbindir}/semanage port -a -t planbcoin_port_t -p tcp 9067
+%{_sbindir}/semanage port -a -t planbcoin_port_t -p tcp 9068
+%{_sbindir}/semanage port -a -t planbcoin_port_t -p tcp 19067
+%{_sbindir}/semanage port -a -t planbcoin_port_t -p tcp 19068
 %{_sbindir}/fixfiles -R planbcoin-server restore &> /dev/null || :
 %{_sbindir}/restorecon -R %{_localstatedir}/lib/planbcoin || :
 fi
@@ -351,10 +351,10 @@ fi
 # SELinux
 if [ $1 -eq 0 ]; then
 	if [ `%{_sbindir}/sestatus |grep -c "disabled"` -eq 0 ]; then
-	%{_sbindir}/semanage port -d -p tcp 8332
-	%{_sbindir}/semanage port -d -p tcp 8333
-	%{_sbindir}/semanage port -d -p tcp 18332
-	%{_sbindir}/semanage port -d -p tcp 18333
+	%{_sbindir}/semanage port -d -p tcp 9067
+	%{_sbindir}/semanage port -d -p tcp 9068
+	%{_sbindir}/semanage port -d -p tcp 19067
+	%{_sbindir}/semanage port -d -p tcp 19068
 	for selinuxvariant in %{selinux_variants}; do
 		%{_sbindir}/semodule -s ${selinuxvariant} -r planbcoin &> /dev/null || :
 	done
