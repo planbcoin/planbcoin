@@ -52,7 +52,7 @@ static CBlock CreateGenesisBlock(const char* pszTimestamp, const CScript& genesi
 static CBlock CreateGenesisBlock(uint32_t nTime, uint32_t nNonce, uint32_t nBits, int32_t nVersion, const CAmount& genesisReward)
 {
     const char* pszTimestamp = "The night before the 4th of July, 2017!";
-    const CScript genesisOutputScript = CScript() << ParseHex("04678afdb0fe5548271967f1a67130b7105cd6a828e03909a67962e0ea1f61deb649f6bc3f4cef38c4f35504e51ec112de5c384df7ba0b8d578a4c702b6bf11d5f") << OP_CHECKSIG;
+    const CScript genesisOutputScript = CScript() << ParseHex("040c9885d1e3b92203bf5d80ec0b760c8c3e01c60a0a85344a947a52c44745ce1b23c04c33b4b3bd66ae0bb90e8a0a401394d6d28f392b8053034710c4a4243631") << OP_CHECKSIG;
     return CreateGenesisBlock(pszTimestamp, genesisOutputScript, nTime, nNonce, nBits, nVersion, genesisReward);
 }
 
@@ -114,31 +114,39 @@ public:
          * The characters are rarely used upper ASCII, not valid as UTF-8, and produce
          * a large 32-bit integer with any alignment.
          */
-        pchMessageStart[0] = 0xa1;
-        pchMessageStart[1] = 0xfe;
-        pchMessageStart[2] = 0xdd;
-        pchMessageStart[3] = 0xd9;
+        pchMessageStart[0] = 0x31;
+        pchMessageStart[1] = 0x3e;
+        pchMessageStart[2] = 0x3d;
+        pchMessageStart[3] = 0x39;
         nDefaultPort = 9068;
         nPruneAfterHeight = 100000;
 
-        genesis = CreateGenesisBlock(1499113885, 4245164057, 0x1d00ffff, 1, 50 * COIN);
+        // nTime, nonce
+        genesis = CreateGenesisBlock(1501995034, 4245164057, 0x1d00ffff, 1, 50 * COIN);
+        hashGenesisBlock = uint256("0x01");
+
+        if (true && genesis.GetHash() != hashGenesisBlock)
+        {
+            Logprintf("recalculating params for mainnet.\n");
+            Logprintf("old mainnet genesis nonce: %s\n", genesis.nNonce.ToString().c_str());
+            Logprintf("old mainnet genesis hash:  %s\n", hashGenesisBlock.ToString().c_str());
+            // deliberately empty for loop finds nonce value.
+            for(genesis.nNonce == 0; genesis.GetHash() > bnProofOfWorkLimit; genesis.nNonce++){ } 
+            Logprintf("new mainnet genesis merkle root: %s\n", genesis.hashMerkleRoot.ToString().c_str());
+            Logprintf("new mainnet genesis nonce: %s\n", genesis.nNonce.ToString().c_str());
+            Logprintf("new mainnet genesis hash: %s\n", genesis.GetHash().ToString().c_str());
+        }
+
         consensus.hashGenesisBlock = genesis.GetHash();
 
         assert(consensus.hashGenesisBlock == uint256S("0x00000000dda15cd3ee6767422922db0a511b5a63f332be4430cd01e023ec566d"));
         assert(genesis.hashMerkleRoot == uint256S("0x739e79563984124c09b0060562762528e0d9ddb3e647a336dbb357b95043f401"));
 
-        // Note that of those with the service bits flag, most only support a subset of possible options
         vSeeds.emplace_back("seed.planbcoin.com", true);
-        // vSeeds.emplace_back("seed.planbcoin.sipa.be", true); // Pieter Wuille, only supports x1, x5, x9, and xd
-        // vSeeds.emplace_back("dnsseed.bluematt.me", true); // Matt Corallo, only supports x9
-        // vSeeds.emplace_back("dnsseed.planbcoin.dashjr.org", false); // Luke Dashjr
-        // vSeeds.emplace_back("seed.planbcoinstats.com", true); // Christian Decker, supports x1 - xf
-        // vSeeds.emplace_back("seed.planbcoin.jonasschnelli.ch", true); // Jonas Schnelli, only supports x1, x5, x9, and xd
-        // vSeeds.emplace_back("seed.btc.petertodd.org", true); // Peter Todd, only supports x1, x5, x9, and xd
 
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,0);
-        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,5);
-        base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,128);
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,4);
+        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,9);
+        base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,103);
         base58Prefixes[EXT_PUBLIC_KEY] = {0x04, 0x88, 0xB2, 0x1E};
         base58Prefixes[EXT_SECRET_KEY] = {0x04, 0x88, 0xAD, 0xE4};
 
@@ -150,16 +158,19 @@ public:
 
         checkpointData = (CCheckpointData) {
             {
-                { 0, uint256S("0x00000000dda15cd3ee6767422922db0a511b5a63f332be4430cd01e023ec566d")},
+                { 0, uint256S("0x001")},
             }
         };
 
+        // Data as of block 00000000000000000166d612d5595e2b1cd88d71d695fc580af64d8da8658c23 (height 446482).
+        // 1483472411, // * UNIX timestamp of last known number of transactions
+        // 184495391,  // * total number of transactions between genesis and that timestamp
+                    //   (the tx=... number in the SetBestChain debug.log lines)
+        // 3.2         // * estimated number of transactions per second after that timestamp
         chainTxData = ChainTxData{
-            // Data as of block 00000000000000000166d612d5595e2b1cd88d71d695fc580af64d8da8658c23 (height 446482).
-            // 1483472411, // * UNIX timestamp of last known number of transactions
-            // 184495391,  // * total number of transactions between genesis and that timestamp
-                        //   (the tx=... number in the SetBestChain debug.log lines)
-            // 3.2         // * estimated number of transactions per second after that timestamp
+            1501995034,
+            0,
+            500
         };
     }
 };
@@ -203,14 +214,28 @@ public:
         // By default assume that the signatures in ancestors of this block are valid.
         consensus.defaultAssumeValid = uint256S("0x00000000000128796ee387cf110ccb9d2f36cffaf7f73079c995377c65ac0dcc"); //1079274
 
-        pchMessageStart[0] = 0x0b;
-        pchMessageStart[1] = 0x11;
-        pchMessageStart[2] = 0x09;
-        pchMessageStart[3] = 0x07;
+        pchMessageStart[0] = 0x2b;
+        pchMessageStart[1] = 0x21;
+        pchMessageStart[2] = 0x29;
+        pchMessageStart[3] = 0x27;
         nDefaultPort = 19409;
         nPruneAfterHeight = 1000;
 
-        genesis = CreateGenesisBlock(1499113885, 4245164057, 0x1d00ffff, 1, 50 * COIN);
+        genesis = CreateGenesisBlock(1501995034, 4245164057, 0x1d00ffff, 1, 50 * COIN);
+        hashGenesisBlock = uint256("0x01");
+
+        if (true && genesis.GetHash() != hashGenesisBlock)
+        {
+            Logprintf("recalculating params for testnet.\n");
+            Logprintf("old testnet genesis nonce: %s\n", genesis.nNonce.ToString().c_str());
+            Logprintf("old testnet genesis hash:  %s\n", hashGenesisBlock.ToString().c_str());
+            // deliberately empty for loop finds nonce value.
+            for(genesis.nNonce == 0; genesis.GetHash() > bnProofOfWorkLimit; genesis.nNonce++){ } 
+            Logprintf("new testnet genesis merkle root: %s\n", genesis.hashMerkleRoot.ToString().c_str());
+            Logprintf("new testnet genesis nonce: %s\n", genesis.nNonce.ToString().c_str());
+            Logprintf("new testnet genesis hash: %s\n", genesis.GetHash().ToString().c_str());
+        }
+
         consensus.hashGenesisBlock = genesis.GetHash();
         assert(consensus.hashGenesisBlock == uint256S("0x00000000dda15cd3ee6767422922db0a511b5a63f332be4430cd01e023ec566d"));
         assert(genesis.hashMerkleRoot == uint256S("0x739e79563984124c09b0060562762528e0d9ddb3e647a336dbb357b95043f401"));
@@ -225,11 +250,11 @@ public:
         // vSeeds.emplace_back("testnet-seed.bluematt.me", false);
         // vSeeds.emplace_back("testnet-seed.planbcoin.schildbach.de", false);
 
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,111);
-        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,196);
-        base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,239);
-        base58Prefixes[EXT_PUBLIC_KEY] = {0x04, 0x35, 0x87, 0xCF};
-        base58Prefixes[EXT_SECRET_KEY] = {0x04, 0x35, 0x83, 0x94};
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(2,141);
+        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(2,130);
+        base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(2,226);
+        base58Prefixes[EXT_PUBLIC_KEY] = {0x02, 0x12, 0xF0, 0xA3};
+        base58Prefixes[EXT_SECRET_KEY] = {0x90, 0x83, 0x20, 0x44};
 
         vFixedSeeds = std::vector<SeedSpec6>(pnSeed6_test, pnSeed6_test + ARRAYLEN(pnSeed6_test));
 
@@ -240,15 +265,14 @@ public:
 
         checkpointData = (CCheckpointData) {
             {
-                {0, uint256S("0")},
+                {0, uint256S("0x001")},
             }
         };
 
         chainTxData = ChainTxData{
-            // Data as of block 00000000c2872f8f8a8935c8e3c5862be9038c97d4de2cf37ed496991166928a (height 1063660)
-            // 1483546230,
-            // 12834668,
-            // 0.15
+            1501995034,
+            0,
+            250
         };
 
     }
@@ -289,14 +313,28 @@ public:
         // By default assume that the signatures in ancestors of this block are valid.
         consensus.defaultAssumeValid = uint256S("0x00");
 
-        pchMessageStart[0] = 0xfa;
-        pchMessageStart[1] = 0xbf;
-        pchMessageStart[2] = 0xb5;
-        pchMessageStart[3] = 0xda;
+        pchMessageStart[0] = 0x1a;
+        pchMessageStart[1] = 0x1f;
+        pchMessageStart[2] = 0x15;
+        pchMessageStart[3] = 0x1a;
         nDefaultPort = 18444;
         nPruneAfterHeight = 1000;
 
-        genesis = CreateGenesisBlock(1499113885, 4245164057, 0x207fffff, 1, 50 * COIN);
+        genesis = CreateGenesisBlock(1501995034, 4245164057, 0x207fffff, 1, 50 * COIN);
+        hashGenesisBlock = uint256("0x01");
+
+        if (true && genesis.GetHash() != hashGenesisBlock)
+        {
+            Logprintf("recalculating params for regnet.\n");
+            Logprintf("old regnet genesis nonce: %s\n", genesis.nNonce.ToString().c_str());
+            Logprintf("old regnet genesis hash:  %s\n", hashGenesisBlock.ToString().c_str());
+            // deliberately empty for loop finds nonce value.
+            for(genesis.nNonce == 0; genesis.GetHash() > bnProofOfWorkLimit; genesis.nNonce++){ } 
+            Logprintf("new regnet genesis merkle root: %s\n", genesis.hashMerkleRoot.ToString().c_str());
+            Logprintf("new regnet genesis nonce: %s\n", genesis.nNonce.ToString().c_str());
+            Logprintf("new regnet genesis hash: %s\n", genesis.GetHash().ToString().c_str());
+        }
+
         consensus.hashGenesisBlock = genesis.GetHash();
         assert(consensus.hashGenesisBlock == uint256S("0x00000000dda15cd3ee6767422922db0a511b5a63f332be4430cd01e023ec566d"));
         assert(genesis.hashMerkleRoot == uint256S("0x739e79563984124c09b0060562762528e0d9ddb3e647a336dbb357b95043f401"));
@@ -310,21 +348,21 @@ public:
 
         checkpointData = (CCheckpointData) {
             {
-                {0, uint256S("0f9188f13cb7b2c71f2a335e3a4fc328bf5beb436012afca590b1a11466e2206")},
+                {0, uint256S("0x001")},
             }
         };
 
         chainTxData = ChainTxData{
-            0,
+            1501995034,
             0,
             0
         };
 
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,111);
-        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,196);
-        base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,239);
-        base58Prefixes[EXT_PUBLIC_KEY] = {0x04, 0x35, 0x87, 0xCF};
-        base58Prefixes[EXT_SECRET_KEY] = {0x04, 0x35, 0x83, 0x94};
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(2,141);
+        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(2,130);
+        base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(2,226);
+        base58Prefixes[EXT_PUBLIC_KEY] = {0x02, 0x12, 0xF0, 0xA3};
+        base58Prefixes[EXT_SECRET_KEY] = {0x90, 0x83, 0x20, 0x44};
     }
 };
 
