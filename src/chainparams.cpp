@@ -82,7 +82,7 @@ public:
         consensus.BIP34Hash = uint256S("0x000000000000024b89b42a942fe0d9fea3bb44ab7bd1b19115dd6a759c0808b8");
         consensus.BIP65Height = 388381; // 000000000000000004c2b624ed5d7756c508d90fd0da2c7c679febfa6c4735f0
         consensus.BIP66Height = 363725; // 00000000000000000379eaa19dce8c9b722d46ae6a57c2f1a988119488b50931
-        consensus.powLimit = uint256S("0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
+        consensus.powLimit = uint256S("00000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
         consensus.nPowTargetTimespan = 10 * 30;
         consensus.nPowTargetSpacing = 1 * 30;
         consensus.fPowAllowMinDifficultyBlocks = false;
@@ -141,9 +141,10 @@ public:
 
         consensus.hashGenesisBlock = genesis.GetHash();
 
-        // assert(consensus.hashGenesisBlock == uint256S("0x8d527b03f36f0af57c262ac9b6399f728c2553e20b4e5fdd89605912d4fe01b9"));
+        // assert(consensus.hashGenesisBlock == uint256S("0x0000005992a9cbbf0b14fa29453536579caf2663883a117e14ab45719cd7f380"));
         // assert(genesis.hashMerkleRoot == uint256S("0x8d50af60a56f3073ee72dc7b5f6b5573a2e941fbc80dc7604c8438e9db5492c5"));
-return;
+        return;
+
         vSeeds.emplace_back("seed.planbcoin.com", true);
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,4);
@@ -189,7 +190,7 @@ public:
         consensus.BIP34Hash = uint256S("0x0000000023b3a96d3484e5abb3755c413e7d41500f8e2a5c3f0dd01299cd8ef8");
         consensus.BIP65Height = 581885; // 00000000007f6655f22f98e72ed80d8b06dc761d5da09df0fa1dc4be4f861eb6
         consensus.BIP66Height = 330776; // 000000002104c8c45e99a8853285a3b592602a3ccde2b832481da85e9e4ba182
-        consensus.powLimit = uint256S("00000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
+        consensus.powLimit = uint256S("007fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
         consensus.nPowTargetTimespan = 14 * 24 * 60 * 60; // two weeks
         consensus.nPowTargetSpacing = 10 * 60;
         consensus.fPowAllowMinDifficultyBlocks = true;
